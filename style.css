@@ -17,7 +17,7 @@ body {
 }
 
 .buy-moreInfoSilver{
-    bottom: -27.4%;
+    bottom: -26.4%;
     position: relative;
 }
 
@@ -33,7 +33,7 @@ body {
 
 .fa-check-circle{
     color: #28CBBC;
-    padding: 0 .3em ;
+    padding: .8em .3em;
 }
 
 a{
@@ -99,12 +99,14 @@ li img{
 .menu ul li {
     padding: .7em 0;
 }
-
+.values{
+    display: flex;
+}
 .recomended {
     text-align: center;
     background-color: #FF9900;
     margin: auto;
-    width: 20%;
+    width: 23%;
     color: white;
     font-size: 1.5em;
     padding: 0.5em 0;
@@ -113,13 +115,13 @@ li img{
 @media only screen and (max-width: 760px) {
     .sponsor {
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(1, 100%);
     }
 
     .buy-moreInfoGold{
         bottom: 0%;
         grid-row-start: 1;
-  grid-row-end: 3;
+    grid-row-end: 3;
         
     }
 }
@@ -156,57 +158,4 @@ table th {
     text-align: center
 }
 
-@media only screen and (max-width: 760px) {
-    p {
-        display: block;
-        font-weight: bold;
-    }
-    table {
-        tr {
-            td:not(:first-child), th:not(:first-child), td:not(.total-val) {
-                display: none;
-            }
-            &:nth-of-type(even) td:first-child {
-                background-color: lighten(#4ECDC4, 35%);
-            }
-            &:nth-of-type(odd) td:first-child {
-                background-color: white;
-            }
-            &:nth-of-type(even) td:not(:first-child) {
-                background-color: white;
-            }
-            th:first-child {
-                width: 100%;
-                display: block;
-            }
-            th:not(:first-child) {
-                width: 40%;
-                transition: transform 0.4s ease-out;
-                transform: translateY(-9999px);
-                position: relative;
-                z-index: -1;
-            }
-            td:not(:first-child) {
-                transition: transform 0.4s ease-out;
-                transform: translateY(-9999px);
-                width: 60%;
-                position: relative;
-                z-index: -1;
-            }
-            td:first-child {
-                display: block;
-                cursor: pointer;
-            }
-            &.total th {
-                width: 25%;
-                display: inline-block;
-            }
-            td.total-val {
-                display: inline-block;
-                transform: translateY(0);
-                width: 75%;
-            }
-        }
-    }
-}
 
